@@ -1,0 +1,120 @@
+/* Hero Section Styling */
+.big-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  /* Large Logo Styling */
+  .big-logo {
+    width: 100%;
+    max-width: 400px; /* Adjust max width for responsiveness */
+    height: 400px; /* Set height to create a square */
+    object-fit: contain; /* Crop the image to fit the square */
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+  }
+  
+  .visible .big-logo {
+    opacity: 1;
+  }
+  
+  /* Centered Slogan Styling */
+  .slogan {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300; /* Use light or regular weight for a balanced look */
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+    color: #333333; /* Adjust color for visibility */
+  }
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Smaller Logo */
+  .small-logo {
+    width: 50px; /* Adjust this size as needed */
+    height: auto;
+  }
+  
+  /* Menu Styling */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: #d0d0d0; /* Light gray line separator */
+  }
+  
+  .menu a {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300; /* Thinner font for menu items */
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .menu a:hover {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+/* Background Colors */
+  
+.white-bg {
+    background-color: #ffffff;
+  }
+  
+  .light-gray-bg {
+    background-color: #f7f7f7;
+  }
+  
+  /* Additional Styling */
+  section {
+    padding: 50px 20px;
+  }
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
