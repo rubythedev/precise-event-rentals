@@ -1,0 +1,357 @@
+/* Product Grid --------------------------------------------------------------- */
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Spacing between items */
+  padding: 20px;
+  margin-top: 80px; /* Ensure it doesn’t overlap the fixed navbar */
+}
+
+/* Grid Item */
+.grid-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0; /* Light border for product card */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px); /* Subtle hover effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.grid-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Crops and centers the image */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Product Title */
+.grid-item h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #333333;
+  margin: 10px 0;
+}
+
+/* Product Details */
+.grid-item p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #555555;
+  margin: 10px 20px;
+  line-height: 1.5;
+}
+
+/* Font --------------------------------------------------------------- */
+.josefin-sans-light {
+  line-height: 1.8; /* Adjust this value as needed for desired space */
+}
+
+.big-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+/* Large Logo Styling */
+.big-logo {
+  width: 100%;
+  max-width: 400px; /* Adjust max width for responsiveness */
+  height: 400px; /* Set height to create a square */
+  object-fit: contain; /* Crop the image to fit the square */
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+}
+
+.visible .big-logo {
+  opacity: 1;
+}
+
+/* Buttons --------------------------------------------------------------- */
+/* Button */
+.grid-item .view-details {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 8px 16px;
+  background-color: #5c5c5c;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item .view-details:hover {
+  background-color: #333333;
+}
+
+/* Button Focus Styling */
+.grid-item .view-details:focus {
+  outline: 2px solid #5c5c5c;
+}
+
+/* Button Focus Styling */
+.browse-rentals-button:focus {
+  outline: 2px solid #5c5c5c;
+}
+
+#decor-sections .section {
+  margin: 20px;
+}
+
+#decor-sections h2 {
+  font-size: 24px;
+}
+
+/* Grid Item */
+.product {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px; /* Padding around the content inside the product */
+}
+
+/* Product Image */
+.product img {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Crops and centers the image */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Product Name */
+.product h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: #333333;
+  margin: 10px 0;
+}
+
+/* Product Description and Price */
+.product p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: #555555;
+  margin: 10px 0;
+}
+
+#product-list .product {
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+#product-list .product img {
+  max-width: 100%;
+}
+
+/* Navbar --------------------------------------------------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Small Logo */
+.small-logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Menu Styling */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  position: relative; /* For dropdown positioning */
+}
+
+.menu a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Prevent wrapping of links */
+}
+
+/* Hover Effect for Links */
+.menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Position below parent link */
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px; /* Ensure dropdown width */
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a {
+    padding: 10px;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+  }
+}
+
+/* Background and Fade In --------------------------------------------------------------- */ 
+.white-bg {
+  background-color: #ffffff;
+}
+
+.light-gray-bg {
+  background-color: #f0f0f0; /* Keep light gray for Rental Decor */
+}
+
+/* Additional Styling */
+section {
+  padding: 50px 20px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Spacing between heading and paragraph */
+#about h1 {
+  margin-bottom: 30px; /* Add space below the heading */
+}
+
+#about p {
+  margin-top: 20px; /* Add space above the paragraph */
+}
+
+/* Footer --------------------------------------------------------------- */
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+/* Individual Social Icon Links */
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  border: none; /* Remove any border */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual Icon Image */
+.social-icons img {
+  width: 25px; /* Set a consistent size */
+  height: auto;
+  margin: 0 10px; /* Space between icons */
+  display: inline-block;
+  border: none; /* Ensure no border around images */
+}
+
+/* Footer Text Styling */
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}

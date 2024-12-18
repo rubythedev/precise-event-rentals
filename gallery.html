@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Precise Event Rentals</title>
+
+    <!-- Embed Josefin Sans Font -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+      
+      /* Font Classes */
+      .josefin-sans-light { font-family: "Josefin Sans", sans-serif; font-weight: 200; font-style: normal; }
+      .josefin-sans-regular { font-family: "Josefin Sans", sans-serif; font-weight: 400; font-style: normal; }
+      .josefin-sans-bold { font-family: "Josefin Sans", sans-serif; font-weight: 700; font-style: normal; }
+      .josefin-sans-italic { font-family: "Josefin Sans", sans-serif; font-weight: 400; font-style: italic; }
+    </style>
+
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<header>
+  <div class="navbar">
+    <!-- Small Logo -->
+    <img src="images/logos/logonobackground.svg" alt="Logo without background" class="small-logo">
+    
+    <!-- Navigation Menu -->
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="rental_decor.html">Rental Decor</a>
+          <ul class="dropdown-menu">
+            <li><a href="rental_decor/arches.html">Arches</a></li>
+            <li><a href="rental_decor/chair-covers.html">Chair Covers</a></li>
+            <li><a href="rental_decor/event-drapings.html">Event Drapings</a></li>
+            <li><a href="rental_decor/flowers.html">Flowers</a></li>
+            <li><a href="rental_decor/napkins.html">Napkins</a></li>
+            <li><a href="rental_decor/table-cloths.html">Table Cloths</a></li>
+            <li><a href="rental_decor/table-runners.html">Table Runners</a></li>
+            <li><a href="rental_decor/table-skirts.html">Table Skirts</a></li>
+            <li><a href="rental_decor/vases.html">Vases</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li>
+          <a href="about.html">About Us</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Gallery Section -->
+<main>
+  <section class="gallery-section">
+    <h1 class="gallery-title">Gallery</h1>
+    <div class="gallery-grid">
+      <!-- Images dynamically added using JavaScript -->
+    </div>
+  </section>
+</main>
+
+<!-- Image Viewer Modal -->
+<div id="image-modal" class="image-modal">
+  <button class="close-btn">&times;</button>
+  <img class="modal-image" src="" alt="Expanded View">
+  <button class="prev-btn">&larr;</button>
+  <button class="next-btn">&rarr;</button>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons">
+    <a href="tel:+13212959169">
+      <img src="images/contact/Phone.svg" alt="Phone Logo">
+    </a>
+    <a href="facebook link" target="_blank">
+      <img src="images/contact/Facebook.svg" alt="Facebook Logo">
+    </a>
+    <a href="instagram link">
+      <img src="images/contact/Instagram.svg" alt="Instagram Logo">
+    </a>
+  </div>
+  <p class="josefin-sans-light">2024 Precise Event Rentals. All Rights Reserved.</p>
+</footer>
+  
+  <script src="js/gallery.js"></script>
+</body>
+</html>

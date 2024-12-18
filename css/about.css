@@ -1,0 +1,319 @@
+/* Font --------------------------------------------------------------- */
+.josefin-sans-light {
+  line-height: 1.8; /* Adjust this value as needed for desired space */
+}
+
+.big-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  /* Large Logo Styling */
+  .big-logo {
+    width: 100%;
+    max-width: 400px; /* Adjust max width for responsiveness */
+    height: 400px; /* Set height to create a square */
+    object-fit: contain; /* Crop the image to fit the square */
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+  }
+  
+  .visible .big-logo {
+    opacity: 1;
+  }
+  
+  /* Centered Slogan Styling */
+  .slogan {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300; /* Use light or regular weight for a balanced look */
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #333333; /* Adjust color for visibility */
+  }
+
+
+
+
+/* Button --------------------------------------------------------------- */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure it takes the full height of its container */
+}
+
+.browse-rentals-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e1e1e1; /* Adjust to your brand color */
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.browse-rentals-button:hover {
+  background-color: #5c5c5c; /* Darker shade for hover */
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+
+
+/* Navbar --------------------------------------------------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Small Logo */
+.small-logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Menu Styling */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  position: relative; /* For dropdown positioning */
+}
+
+.menu a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Prevent wrapping of links */
+}
+
+/* Hover Effect for Links */
+.menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Position below parent link */
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px; /* Ensure dropdown width */
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a {
+    padding: 10px;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+  }
+}
+
+/* Background and Fade In --------------------------------------------------------------- */ 
+.white-bg {
+    background-color: #ffffff;
+  }
+  
+  .light-gray-bg {
+    background-color: #f0f0f0; /* Keep light gray for Rental Decor */
+  }
+  
+  /* Additional Styling */
+  section {
+    padding: 50px 20px;
+  }
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+/* About Us --------------------------------------------------------------- */
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse; /* Image on the right */
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px; /* Adjust image size */
+  height: auto;
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-center {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Ensure headings stand out */
+.about-text h1,
+.about-center h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text p,
+.about-center p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #333333;
+}
+
+
+/* Footer --------------------------------------------------------------- */
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+/* Individual Social Icon Links */
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  border: none; /* Remove any border */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual Icon Image */
+.social-icons img {
+  width: 25px; /* Set a consistent size */
+  height: auto;
+  margin: 0 10px; /* Space between icons */
+  display: inline-block;
+  border: none; /* Ensure no border around images */
+}
+
+/* Footer Text Styling */
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}
