@@ -40,7 +40,7 @@
 
 
 
-/* Navbar --------------------------------------------------------------- */
+  /* Navbar --------------------------------------------------------------- */
 .navbar {
   display: flex;
   align-items: center;
@@ -61,6 +61,88 @@
   height: auto;
 }
 
+/* Hamburger button (default state) */
+.hamburger {
+  display: none; /* Hidden on large screens */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px; /* Initial width for the hamburger */
+  height: 40px; /* Initial height for the hamburger */
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition for any property change */
+}
+
+/* Bars inside hamburger button */
+.hamburger .bar {
+  width: 30px; /* Smaller width for bars */
+  height: 2px; /* Thinner bars */
+  background-color: #5d5d5d;
+  margin: 4px 0;
+  border-radius: 50px; /* Rounded bars */
+  transition: all 0.3s ease; /* Smooth transition for bar transformations */
+}
+
+/* Transform the bars into circles when the hamburger is open */
+.hamburger.open .bar {
+  background-color: transparent; /* Remove the bar background */
+  border: 2px solid #5d5d5d; /* Border for circles */
+  border-radius: 50px; /* Ensure the bars are round when transformed */
+  margin: 0; /* Reset margin for better centering */
+}
+
+/* First circle (top, will turn into a circle) */
+.hamburger.open .bar:nth-child(1) {
+  width: 10px; /* Large circle for top */
+  height: 30px; /* Large circle for top */
+  transform: translateY(11.5px) scale(1.5); /* Move the top circle lower */
+  border-width: 1px; /* Dot-like appearance */
+}
+
+/* Second circle (middle, remains a small circle) */
+.hamburger.open .bar:nth-child(2) {
+  width: 10px; /* Large circle for top */
+  height: 30px; /* Large circle for top */
+  transform: translateY(-2px) scale(.3); /* Move the top circle lower */
+  border-width: 4px; /* Dot-like appearance */
+}
+
+/* Third bar (bottom will disappear) */
+.hamburger.open .bar:nth-child(3) {
+  width: 10px; /* Small circle for the middle */
+  height: 30px; /* Small circle for the middle */
+  transform: translateY(-16px) scale(3); /* Maintain middle size */
+  border-width: .1px; /* Dot-like appearance */
+}
+
+
+
+
+/* Menu Wrapper */
+.menu-wrapper {
+  display: flex; /* Default for large screens */
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-wrapper.open {
+  display: flex;
+  flex-direction: column; /* For mobile view */
+  position: absolute;
+  top: 50px; /* Align dropdown below navbar */
+  right: 10px; /* Align to the right near the hamburger */
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  width: auto; /* Keep dropdown size small */
+}
+
 /* Menu Styling */
 .menu {
   list-style: none;
@@ -68,11 +150,10 @@
   gap: 15px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .menu li {
-  position: relative; /* For dropdown positioning */
+  position: relative;
 }
 
 .menu a {
@@ -80,12 +161,11 @@
   font-weight: 300;
   color: #000000;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 5px 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  white-space: nowrap; /* Prevent wrapping of links */
+  white-space: nowrap;
 }
 
-/* Hover Effect for Links */
 .menu a:hover {
   background-color: #333333;
   color: #ffffff;
@@ -93,9 +173,9 @@
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
-  top: 100%; /* Position below parent link */
+  top: 100%;
   left: 0;
   background-color: #ffffff;
   list-style: none;
@@ -104,18 +184,12 @@
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  min-width: 200px; /* Ensure dropdown width */
-}
-
-.dropdown-menu li {
-  padding: 0;
 }
 
 .dropdown-menu a {
   display: block;
   padding: 10px 20px;
   color: #000000;
-  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .dropdown-menu a:hover {
@@ -123,31 +197,32 @@
   color: #ffffff;
 }
 
-/* Show Dropdown on Hover */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Responsive Design for Mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .menu {
-    flex-direction: column;
-    width: 100%;
+  .hamburger {
+    display: flex; /* Show hamburger menu */
   }
 
-  .menu li {
-    width: 100%;
+  .menu-wrapper {
+    display: none; /* Hide menu by default */
+  }
+
+  .menu-wrapper.open {
+    display: flex; /* Show when toggled */
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .menu a {
-    padding: 10px;
+    padding: 10px 20px;
     display: block;
-    text-align: left;
   }
 
   .dropdown-menu {
@@ -155,6 +230,13 @@
     box-shadow: none;
   }
 }
+
+
+
+
+
+
+
 
 /* Background and Fade In --------------------------------------------------------------- */ 
 .white-bg {
