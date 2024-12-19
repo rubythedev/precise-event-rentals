@@ -1,0 +1,463 @@
+/* Font --------------------------------------------------------------- */
+.josefin-sans-light {
+  line-height: 1.8; /* Adjust this value as needed for desired space */
+}
+
+.big-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  /* Large Logo Styling */
+  .big-logo {
+    width: 100%;
+    max-width: 400px; /* Adjust max width for responsiveness */
+    height: 400px; /* Set height to create a square */
+    object-fit: contain; /* Crop the image to fit the square */
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+  }
+  
+  .visible .big-logo {
+    opacity: 1;
+  }
+  
+  /* Centered Slogan Styling */
+  .slogan {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300; /* Use light or regular weight for a balanced look */
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #333333; /* Adjust color for visibility */
+  }
+
+
+
+
+/* Button --------------------------------------------------------------- */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure it takes the full height of its container */
+}
+
+.browse-rentals-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e1e1e1; /* Adjust to your brand color */
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.browse-rentals-button:hover {
+  background-color: #5c5c5c; /* Darker shade for hover */
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+
+/* Navbar --------------------------------------------------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Small Logo */
+.small-logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Hamburger button (default state) */
+.hamburger {
+  display: none; /* Hidden on large screens */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px; /* Initial width for the hamburger */
+  height: 40px; /* Initial height for the hamburger */
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition for any property change */
+}
+
+/* Bars inside hamburger button */
+.hamburger .bar {
+  width: 30px; /* Smaller width for bars */
+  height: 2px; /* Thinner bars */
+  background-color: #5d5d5d;
+  margin: 4px 0;
+  border-radius: 50px; /* Rounded bars */
+  transition: all 0.3s ease; /* Smooth transition for bar transformations */
+}
+
+/* Transform the bars into circles when the hamburger is open */
+.hamburger.open .bar {
+  background-color: transparent; /* Remove the bar background */
+  border: 2px solid #5d5d5d; /* Border for circles */
+  border-radius: 50px; /* Ensure the bars are round when transformed */
+  margin: 0; /* Reset margin for better centering */
+}
+
+/* First circle (top, will turn into a circle) */
+.hamburger.open .bar:nth-child(1) {
+  width: 10px; /* Large circle for top */
+  height: 30px; /* Large circle for top */
+  transform: translateY(11.5px) scale(1.5); /* Move the top circle lower */
+  border-width: 1px; /* Dot-like appearance */
+}
+
+/* Second circle (middle, remains a small circle) */
+.hamburger.open .bar:nth-child(2) {
+  width: 10px; /* Large circle for top */
+  height: 30px; /* Large circle for top */
+  transform: translateY(-2px) scale(.3); /* Move the top circle lower */
+  border-width: 4px; /* Dot-like appearance */
+}
+
+/* Third bar (bottom will disappear) */
+.hamburger.open .bar:nth-child(3) {
+  width: 10px; /* Small circle for the middle */
+  height: 30px; /* Small circle for the middle */
+  transform: translateY(-16px) scale(3); /* Maintain middle size */
+  border-width: .1px; /* Dot-like appearance */
+}
+
+
+
+
+/* Menu Wrapper */
+.menu-wrapper {
+  display: flex; /* Default for large screens */
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-wrapper.open {
+  display: flex;
+  flex-direction: column; /* For mobile view */
+  position: absolute;
+  top: 50px; /* Align dropdown below navbar */
+  right: 10px; /* Align to the right near the hamburger */
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  width: auto; /* Keep dropdown size small */
+}
+
+/* Menu Styling */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger menu */
+  }
+
+  .menu-wrapper {
+    display: none; /* Hide menu by default */
+  }
+
+  .menu-wrapper.open {
+    display: flex; /* Show when toggled */
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px 20px;
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+  }
+}
+
+
+
+
+
+/* Background and Fade In --------------------------------------------------------------- */ 
+.white-bg {
+    background-color: #ffffff;
+  }
+  
+  .light-gray-bg {
+    background-color: #f0f0f0; /* Keep light gray for Rental Decor */
+  }
+  
+  /* Additional Styling */
+  section {
+    padding: 50px 20px;
+  }
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+  /* Center the h1 in all sections */
+#about h1,
+#rental-decor h1,
+#gallery-preview h1 {
+  text-align: center; /* Center align the heading text */
+  margin-bottom: 30px; /* Add space below the heading */
+  font-size: 1.8rem; /* Adjust size as needed */
+}
+
+
+/* About --------------------------------------------------------------- */
+#about {
+  background-color: #f7f7f7; /* Lighter gray for About and Gallery */
+  text-align: center; /* Center the text */
+  padding: 50px 20px;
+}
+
+/* Spacing between heading and paragraph */
+#about h1 {
+  margin-bottom: 30px; /* Add space below the heading */
+}
+
+#about p {
+  margin-top: 20px; /* Add space above the paragraph */
+}
+
+
+/* Gallery --------------------------------------------------------------- */
+#gallerysection {
+  padding: 50px 20px;
+  text-align: center; /* Center the text */
+  background-color: #ffffff; /* Lighter gray for About and Gallery */
+  animation: fadeIn 1.5s forwards 1s;
+}
+
+  /* Gallery Container */
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  /* Gallery Image Styling */
+  .gallery-image {
+    width: 400px; /* Fixed image width */
+    height: 400px; /* Fixed image height */
+    object-fit: cover; /* Crop the image while maintaining aspect ratio */
+    transition: all 0.5s ease-in-out; /* Smooth transitions */
+    position: absolute; /* Positioning for overlap */
+  }
+
+  /* Left Image Styling */
+  .left {
+    left: 0;
+    opacity: 0.7;
+    transform: scale(0.9); /* Smaller size */
+  }
+
+  /* Center Image Styling */
+  .center {
+    left: 50%;
+    transform: translateX(-50%) scale(1); /* Fully visible and centered */
+    opacity: 1;
+    z-index: 1; /* Ensure it's on top */
+  }
+
+  /* Right Image Styling */
+  .right {
+    right: 0;
+    opacity: 0.7;
+    transform: scale(0.9); /* Smaller size */
+  }
+
+
+
+
+
+/* Contact --------------------------------------------------------------- */
+#contact {
+  text-align: center; /* Ensures everything inside is centered */
+  background-color: #f7f7f7; /* Set background color */
+  padding: 50px 20px;
+}
+
+/* Centered Heading */
+#contact h1 {
+  text-align: center; /* Center align the heading text */
+  margin-bottom: 30px; /* Add space below the heading */
+  font-size: 1.8rem; /* Adjust size as needed */
+}
+
+/* Phone Link Styling */
+.phone-link {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+  color: #5c5c5c; /* Change color on hover */
+}
+
+
+
+
+/* Footer --------------------------------------------------------------- */
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+/* Individual Social Icon Links */
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  border: none; /* Remove any border */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual Icon Image */
+.social-icons img {
+  width: 25px; /* Set a consistent size */
+  height: auto;
+  margin: 0 10px; /* Space between icons */
+  display: inline-block;
+  border: none; /* Ensure no border around images */
+}
+
+/* Footer Text Styling */
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}
