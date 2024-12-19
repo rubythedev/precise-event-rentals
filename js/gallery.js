@@ -72,15 +72,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerMenu = document.querySelector(".hamburger");
-  const menuWrapper = document.querySelector(".menu-wrapper");
-
-  // Toggle classes on click
-  hamburgerMenu.addEventListener("click", () => {
-    menuWrapper.classList.toggle("open");
-    hamburgerMenu.classList.toggle("open");
-  });
-});
-
-  

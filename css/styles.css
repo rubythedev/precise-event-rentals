@@ -450,14 +450,4 @@ footer {
 .social-icons img {
   width: 25px; /* Set a consistent size */
   height: auto;
-  margin: 0 10px; /* Space between icons */
-  display: inline-block;
-  border: none; /* Ensure no border around images */
-}
-
-/* Footer Text Styling */
-footer p {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
-  margin-top: 20px;
-}
+  margin
