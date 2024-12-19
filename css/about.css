@@ -277,4 +277,123 @@
   
   /* Additional Styling */
   section {
-    padding: 50px 
+    padding: 50px 20px;
+  }
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+/* About Us --------------------------------------------------------------- */
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse; /* Image on the right */
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px; /* Adjust image size */
+  height: auto;
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-center {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Ensure headings stand out */
+.about-text h1,
+.about-center h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text p,
+.about-center p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #333333;
+}
+
+
+/* Footer --------------------------------------------------------------- */
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+/* Individual Social Icon Links */
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  border: none; /* Remove any border */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual Icon Image */
+.social-icons img {
+  width: 25px; /* Set a consistent size */
+  height: auto;
+  margin: 0 10px; /* Space between icons */
+  display: inline-block;
+  border: none; /* Ensure no border around images */
+}
+
+/* Footer Text Styling */
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}

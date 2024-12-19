@@ -309,4 +309,127 @@
   z-index: 1000;
 }
 
-.dropdo
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger menu */
+  }
+
+  .menu-wrapper {
+    display: none; /* Hide menu by default */
+  }
+
+  .menu-wrapper.open {
+    display: flex; /* Show when toggled */
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px 20px;
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+  }
+}
+
+
+
+/* Background and Fade In --------------------------------------------------------------- */ 
+.white-bg {
+  background-color: #ffffff;
+}
+
+.light-gray-bg {
+  background-color: #f0f0f0; /* Keep light gray for Rental Decor */
+}
+
+/* Additional Styling */
+section {
+  padding: 50px 20px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Spacing between heading and paragraph */
+#about h1 {
+  margin-bottom: 30px; /* Add space below the heading */
+}
+
+#about p {
+  margin-top: 20px; /* Add space above the paragraph */
+}
+
+/* Footer --------------------------------------------------------------- */
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+/* Individual Social Icon Links */
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  border: none; /* Remove any border */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual Icon Image */
+.social-icons img {
+  width: 25px; /* Set a consistent size */
+  height: auto;
+  margin: 0 10px; /* Space between icons */
+  display: inline-block;
+  border: none; /* Ensure no border around images */
+}
+
+/* Footer Text Styling */
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}

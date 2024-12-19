@@ -301,4 +301,86 @@ section {
 /* Contact Heading */
 section h1 {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: bold; /* Use bold for e
+  font-weight: bold; /* Use bold for emphasis */
+  font-size: 1.8rem; /* Adjust size for headings */
+  margin-top: 100px; /* Space above heading */
+  margin-bottom: 30px; /* Space below heading */
+  line-height: 1.5; /* Consistent line height */
+  color: #000; /* Ensure high contrast */
+}
+
+/* Contact Paragraph */
+section p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; /* Regular weight for paragraph text */
+  font-size: 1rem; /* Slightly smaller font size for body text */
+  margin-bottom: 20px; /* Add space below paragraph */
+  line-height: 1.8; /* Improve readability */
+  color: #555; /* Softer contrast for body text */
+}
+
+/* Links */
+section a {
+  color: #007BFF; /* Default blue link color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+section a:hover {
+  color: #0056b3; /* Darker blue for hover state */
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Ensure the entire page fills the viewport */
+html, body {
+  height: 100%; /* Full height for flexbox alignment */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column; /* Arrange body content vertically */
+}
+
+/* Main content wrapper to fill the remaining space */
+main {
+  flex: 1; /* Push the footer to the bottom by growing to fill available space */
+}
+
+/* Footer --------------------------------------------------------------- */
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  width: 100%; /* Ensure full width */
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+/* Individual Social Icon Links */
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  border: none; /* Remove any border */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual Icon Image */
+.social-icons img {
+  width: 25px; /* Set a consistent size */
+  height: auto;
+  margin: 0 10px; /* Space between icons */
+  display: inline-block;
+  border: none; /* Ensure no border around images */
+}
+
+/* Footer Text Styling */
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}
